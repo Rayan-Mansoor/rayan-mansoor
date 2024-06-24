@@ -18,8 +18,8 @@
 <br>
 <li>Mobile Development</li>
 
-## 🌐 Portfolio:
-[![Portfolio](https://img.shields.io/badge/Portfolio-%230077B5.svg?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rayan-mansoor.github.io/rayan-mansoor)
+## 🚀 Portfolio:
+[![Portfolio](https://img.shields.io/badge/Portfolio-%230077B5.svg?style=for-the-badge&logo=about.me&logoColor=white)](https://rayan-mansoor.github.io/rayan-mansoor)
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rayanmansoor) 
