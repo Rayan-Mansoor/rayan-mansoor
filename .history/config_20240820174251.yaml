@@ -1,0 +1,107 @@
+baseURL: "https://rayan-mansoor.github.io/rayan-mansoor/"
+languageCode: en-us
+title: Rayan Mansoor
+theme: PaperMod
+publishDir: "docs"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 20
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 40
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Rayan Mansoor"
+    subtitle: |
+
+    # In the dynamic realm of mobile development, I craft innovative applications that seamlessly blend functionality with user-centric design. My expertise spans both Android (Kotlin) and React Native Expo (TypeScript), allowing for versatile solutions across native and cross-platform environments. Grounded in a solid foundation of Software Engineering from NUST University, Pakistan, I bring a comprehensive approach to each project.
+
+    # My work is characterized by a commitment to modern design principles and the integration of cutting-edge technologies, including machine learning. This forward-thinking approach ensures that applications not only meet current market demands but are also poised for future scalability and adaptation.
+    
+    # From initial concept to final deployment, I prioritize creating accessible and enjoyable digital experiences. Each project is an opportunity to push boundaries, solve complex challenges, and deliver applications that offer genuine value to users and businesses alike.
+      
+      At the forefront of mobile development, I specialize in creating innovative, user-centric applications using Android (Kotlin) and React Native Expo (TypeScript). With a degree in Software Engineering from NUST University, Pakistan, my expertise spans both native and cross-platform development, ensuring seamless, high-quality user experiences.
+
+      Committed to modern design principles and advanced machine learning integration, I leverage the latest technologies to meet current demands and anticipate future needs. From concept to deployment, I focus on making technology accessible and enjoyable, blending functionality with aesthetic appeal.
+
+      Passionate about continuous improvement and overcoming technical challenges, my goal is to craft mobile applications that stand out, offering unique value and exceptional user experiences. 
+    
+    imageUrl: "home/portfolio-dp.jpg"
+    imageWidth: 220
+    imageHeight: 220
+    buttons:
+      - name: "Resume"
+        url: "https://drive.google.com/file/d/1EEy5kzFwxeQilEEe3O-hgKj-P3W_Tbu-/view?usp=drive_link"
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:rayanmansoor45@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/rayanmansoor"
+    - name: "github"
+      url: "https://github.com/rayan-mansoor"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

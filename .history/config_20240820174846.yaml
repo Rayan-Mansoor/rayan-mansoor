@@ -1,0 +1,100 @@
+baseURL: "https://rayan-mansoor.github.io/rayan-mansoor/"
+languageCode: en-us
+title: Rayan Mansoor
+theme: PaperMod
+publishDir: "docs"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 20
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 40
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Rayan Mansoor"
+    subtitle: |
+      In the dynamic realm of mobile development, I craft innovative applications that seamlessly blend functionality with user-centric design. My expertise spans both Android (Kotlin) and React Native Expo (TypeScript), allowing for versatile solutions across native and cross-platform environments. Grounded in a solid foundation of Software Engineering from NUST University, Pakistan, I bring a comprehensive approach to each project.
+
+      Committed to modern design principles and advanced machine learning integration, I leverage the latest technologies to meet current demands and anticipate future needs. From concept to deployment, I focus on making technology accessible and enjoyable, blending functionality with aesthetic appeal.
+
+      Passionate about continuous improvement and overcoming technical challenges, my goal is to craft mobile applications that stand out, offering unique value and exceptional user experiences.
+    
+    imageUrl: "home/portfolio-dp.jpg"
+    imageWidth: 220
+    imageHeight: 220
+    buttons:
+      - name: "Resume"
+        url: "https://drive.google.com/file/d/1EEy5kzFwxeQilEEe3O-hgKj-P3W_Tbu-/view?usp=drive_link"
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:rayanmansoor45@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/rayanmansoor"
+    - name: "github"
+      url: "https://github.com/rayan-mansoor"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
