@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>ASR on Rayan Mansoor</title>
-    <link>https://rayan-mansoor.github.io/rayan-mansoor/tags/asr/</link>
-    <description>Recent content in ASR on Rayan Mansoor</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <atom:link href="https://rayan-mansoor.github.io/rayan-mansoor/tags/asr/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Intenly – Voice Dataset Builder</title>
-      <link>https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/</guid>
-      <description>Intenly helps ML teams quickly collect multilingual speech with transcripts and intent labels, then export training-ready datasets.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>ASR on Rayan Mansoor</title><link>https://rayan-mansoor.github.io/rayan-mansoor/tags/asr/</link><description>Recent content in ASR on Rayan Mansoor</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><atom:link href="https://rayan-mansoor.github.io/rayan-mansoor/tags/asr/index.xml" rel="self" type="application/rss+xml"/><item><title>Intenly – Voice Dataset Builder</title><link>https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/</guid><description>Intenly helps ML teams quickly collect multilingual speech with transcripts and intent labels, then export training-ready datasets.</description></item></channel></rss>
