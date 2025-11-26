@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Javascript on Rayan Mansoor</title>
+    <link>https://rayan-mansoor.github.io/rayan-mansoor/tags/javascript/</link>
+    <description>Recent content in Javascript on Rayan Mansoor</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <atom:link href="https://rayan-mansoor.github.io/rayan-mansoor/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Velora: A Voice-Controlled mHealth Application with Adaptive User Interface for Elderly Users</title>
+      <link>https://rayan-mansoor.github.io/rayan-mansoor/projects/react-native-doctor-appointment-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://rayan-mansoor.github.io/rayan-mansoor/projects/react-native-doctor-appointment-app/</guid>
+      <description>A Doctor Appointment App that features accessibility options like voice control, bilingual support, adjustable elements and colorblind mode, alongside core functions such as appointment booking and health reminders.</description>
+    </item>
+    <item>
+      <title>E-Commerce React-Native App</title>
+      <link>https://rayan-mansoor.github.io/rayan-mansoor/projects/react-native-ecommerce-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://rayan-mansoor.github.io/rayan-mansoor/projects/react-native-ecommerce-app/</guid>
+      <description>An Ecommerce App with complete admin panel and Firebase as backend</description>
+    </item>
+    <item>
+      <title>News Website</title>
+      <link>https://rayan-mansoor.github.io/rayan-mansoor/projects/news-website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://rayan-mansoor.github.io/rayan-mansoor/projects/news-website/</guid>
+      <description>A React-based news site that fetches live articles by category, with search, detail pages, and SPA navigation.</description>
+    </item>
+  </channel>
+</rss>

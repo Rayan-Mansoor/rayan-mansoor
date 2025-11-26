@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaMail on Rayan Mansoor</title>
+    <link>https://rayan-mansoor.github.io/rayan-mansoor/tags/javamail/</link>
+    <description>Recent content in JavaMail on Rayan Mansoor</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <atom:link href="https://rayan-mansoor.github.io/rayan-mansoor/tags/javamail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todo List Application</title>
+      <link>https://rayan-mansoor.github.io/rayan-mansoor/projects/todo-list-application/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://rayan-mansoor.github.io/rayan-mansoor/projects/todo-list-application/</guid>
+      <description>A cross-platform desktop Todo app with deadline tracking, search, local persistence, and email export, built with Java and JavaFX.</description>
+    </item>
+  </channel>
+</rss>

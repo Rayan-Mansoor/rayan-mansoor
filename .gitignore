@@ -1,0 +1,90 @@
+# =========================================
+# Hugo
+# =========================================
+
+# Hugo generated resources (for image processing, etc.)
+resources/_gen/
+assets/_gen/
+
+# Hugo build lock
+.hugo_build.lock
+
+# Hugo stats file (if generated for bundlers)
+hugo_stats.json
+
+# =========================================
+# Go / Hugo Modules
+# =========================================
+
+# Keep go.mod and go.sum tracked!
+# Only ignore workspace files if you ever use them.
+go.work
+go.work.sum
+
+
+# =========================================
+# Node / Frontend tooling (if you add it later)
+# =========================================
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.cache/
+dist/
+build/
+
+
+# =========================================
+# OS junk
+# =========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.Trash-*
+
+
+# =========================================
+# Editors / IDEs
+# =========================================
+
+# VS Code
+.vscode/
+.history/
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# General editor swap/backup files
+*~
+*.swp
+*.swo
+*.tmp
+
+
+# =========================================
+# Logs
+# =========================================
+
+*.log
+*.out
+*.pid
+*.seed
+*.pid.lock

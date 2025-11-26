@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Image Manipulation App | Rayan Mansoor</title>
+<meta name="keywords" content="Kotlin, Android, ViewBinding, XML, Image Processing, Glide, MediaStore">
+<meta name="description" content="An offline-first Android image tools app to crop, resize, compress, convert, and share images, saving results straight to the gallery.">
+<meta name="author" content="">
+<link rel="canonical" href="https://rayan-mansoor.github.io/rayan-mansoor/projects/image-manipulation-app/">
+<link crossorigin="anonymous" href="/rayan-mansoor/assets/css/stylesheet.357b406731b533353f939725533aeb60de936989a4798292ba747eb941f9e081.css" integrity="sha256-NXtAZzG1MzU/k5clUzrrYN6TaYmkeYKSunR&#43;uUH54IE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rayan-mansoor.github.io/rayan-mansoor/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rayan-mansoor.github.io/rayan-mansoor/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://rayan-mansoor.github.io/rayan-mansoor/projects/image-manipulation-app/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/image-manipulation-app/">
+  <meta property="og:site_name" content="Rayan Mansoor">
+  <meta property="og:title" content="Image Manipulation App">
+  <meta property="og:description" content="An offline-first Android image tools app to crop, resize, compress, convert, and share images, saving results straight to the gallery.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:tag" content="Kotlin">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="ViewBinding">
+    <meta property="article:tag" content="XML">
+    <meta property="article:tag" content="Image Processing">
+    <meta property="article:tag" content="Glide">
+    <meta property="og:image" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/Image-Manipulation.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/Image-Manipulation.jpg">
+<meta name="twitter:title" content="Image Manipulation App">
+<meta name="twitter:description" content="An offline-first Android image tools app to crop, resize, compress, convert, and share images, saving results straight to the gallery.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://rayan-mansoor.github.io/rayan-mansoor/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Image Manipulation App",
+      "item": "https://rayan-mansoor.github.io/rayan-mansoor/projects/image-manipulation-app/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Image Manipulation App",
+  "name": "Image Manipulation App",
+  "description": "An offline-first Android image tools app to crop, resize, compress, convert, and share images, saving results straight to the gallery.",
+  "keywords": [
+    "Kotlin", "Android", "ViewBinding", "XML", "Image Processing", "Glide", "MediaStore"
+  ],
+  "articleBody": "🔗 GitHub Repo – Image Manipulation App Description An Android image tools app focused on quick, offline-friendly manipulation of photos.\nThe app lets users:\nCrop images Resize by pixels or percentage Compress to smaller file sizes Convert between common formats Save results directly to the gallery and share them It’s designed as a compact, utility-style app: no server, no accounts, just local processing and clean outputs.\nKey Features Crop \u0026 Reframe\nFreeform or 1:1 cropping to adjust framing before export.\nFlexible Resize Options\nResize by exact pixels or by percentage, with optional aspect-ratio preservation for cleaner results.\nSmart Compression\nReduce file size without destroying quality, with options for automatic “target size” compression or manual quality selection.\nFormat Conversion\nConvert between JPEG, PNG, and WEBP, with safeguards for very large images so the app stays stable.\nSaves to Gallery\nProcessed images are written to MediaStore with a clear naming pattern, and appear immediately in gallery apps.\nRecent Files \u0026 Sharing\nBuilt-in Recent view for outputs created by the app, with quick actions to share (e.g. to WhatsApp) or delete.\nOffline-First\nAll operations run entirely on-device — no network, no external services required.\nTech Stack Language: Kotlin UI: Android Views with ViewBinding + XML layouts Image Handling: Glide for decoding/resizing, EXIF-aware dimension handling Cropping: CanHub Android-Image-Cropper Lists \u0026 UI Components: RecyclerView, Material Components Storage: Storage Access Framework + MediaStore for saving outputs to the gallery ",
+  "wordCount" : "233",
+  "inLanguage": "en",
+  "image":"https://rayan-mansoor.github.io/rayan-mansoor/projects/Image-Manipulation.jpg","datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rayan-mansoor.github.io/rayan-mansoor/projects/image-manipulation-app/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rayan Mansoor",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rayan-mansoor.github.io/rayan-mansoor/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rayan-mansoor.github.io/rayan-mansoor/" accesskey="h" title="Rayan Mansoor (Alt + H)">Rayan Mansoor</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/projects" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://rayan-mansoor.github.io/rayan-mansoor/">Home</a>&nbsp;»&nbsp;<a href="https://rayan-mansoor.github.io/rayan-mansoor/projects/">Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Image Manipulation App
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://rayan-mansoor.github.io/rayan-mansoor/projects/Image-Manipulation.jpg" alt="">
+        
+</figure>
+  <div class="post-content"><h3 id="-github-repo--image-manipulation-app">🔗 <a href="https://github.com/Rayan-Mansoor/Android-Image-Manipulation-App">GitHub Repo – Image Manipulation App</a><a hidden class="anchor" aria-hidden="true" href="#-github-repo--image-manipulation-app">#</a></h3>
+<h2 id="description">Description<a hidden class="anchor" aria-hidden="true" href="#description">#</a></h2>
+<p>An <strong>Android image tools app</strong> focused on quick, offline-friendly manipulation of photos.</p>
+<p>The app lets users:</p>
+<ul>
+<li>Crop images</li>
+<li>Resize by pixels or percentage</li>
+<li>Compress to smaller file sizes</li>
+<li>Convert between common formats</li>
+<li>Save results directly to the gallery and share them</li>
+</ul>
+<p>It’s designed as a compact, utility-style app: no server, no accounts, just local processing and clean outputs.</p>
+<hr>
+<h2 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h2>
+<ul>
+<li>
+<p><strong>Crop &amp; Reframe</strong><br>
+Freeform or 1:1 cropping to adjust framing before export.</p>
+</li>
+<li>
+<p><strong>Flexible Resize Options</strong><br>
+Resize by <strong>exact pixels</strong> or by <strong>percentage</strong>, with optional aspect-ratio preservation for cleaner results.</p>
+</li>
+<li>
+<p><strong>Smart Compression</strong><br>
+Reduce file size without destroying quality, with options for automatic “target size” compression or manual quality selection.</p>
+</li>
+<li>
+<p><strong>Format Conversion</strong><br>
+Convert between <strong>JPEG, PNG, and WEBP</strong>, with safeguards for very large images so the app stays stable.</p>
+</li>
+<li>
+<p><strong>Saves to Gallery</strong><br>
+Processed images are written to <strong>MediaStore</strong> with a clear naming pattern, and appear immediately in gallery apps.</p>
+</li>
+<li>
+<p><strong>Recent Files &amp; Sharing</strong><br>
+Built-in <strong>Recent</strong> view for outputs created by the app, with quick actions to <strong>share</strong> (e.g. to WhatsApp) or delete.</p>
+</li>
+<li>
+<p><strong>Offline-First</strong><br>
+All operations run entirely on-device — no network, no external services required.</p>
+</li>
+</ul>
+<hr>
+<h2 id="tech-stack">Tech Stack<a hidden class="anchor" aria-hidden="true" href="#tech-stack">#</a></h2>
+<ul>
+<li><strong>Language:</strong> Kotlin</li>
+<li><strong>UI:</strong> Android Views with ViewBinding + XML layouts</li>
+<li><strong>Image Handling:</strong> Glide for decoding/resizing, EXIF-aware dimension handling</li>
+<li><strong>Cropping:</strong> CanHub Android-Image-Cropper</li>
+<li><strong>Lists &amp; UI Components:</strong> RecyclerView, Material Components</li>
+<li><strong>Storage:</strong> Storage Access Framework + MediaStore for saving outputs to the gallery</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/kotlin/">Kotlin</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/android/">Android</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/viewbinding/">ViewBinding</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/xml/">XML</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/image-processing/">Image Processing</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/glide/">Glide</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/mediastore/">MediaStore</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://rayan-mansoor.github.io/rayan-mansoor/">Rayan Mansoor</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

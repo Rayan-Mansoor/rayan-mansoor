@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>K-Electric Field Service Management | Rayan Mansoor</title>
+<meta name="keywords" content="Kotlin, Android, Jetpack Compose, Field Service, OCR, Computer Vision, Maps, Offline First, REST APIs">
+<meta name="description" content="A web &amp; mobile field service solution for K-Electric, enabling 2,000&#43; meter readers to manage daily assignments with AI-powered meter reading, maps, and offline sync.">
+<meta name="author" content="">
+<link rel="canonical" href="https://rayan-mansoor.github.io/rayan-mansoor/projects/k-electric-fsm/">
+<link crossorigin="anonymous" href="/rayan-mansoor/assets/css/stylesheet.357b406731b533353f939725533aeb60de936989a4798292ba747eb941f9e081.css" integrity="sha256-NXtAZzG1MzU/k5clUzrrYN6TaYmkeYKSunR&#43;uUH54IE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rayan-mansoor.github.io/rayan-mansoor/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rayan-mansoor.github.io/rayan-mansoor/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://rayan-mansoor.github.io/rayan-mansoor/projects/k-electric-fsm/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/k-electric-fsm/">
+  <meta property="og:site_name" content="Rayan Mansoor">
+  <meta property="og:title" content="K-Electric Field Service Management">
+  <meta property="og:description" content="A web &amp; mobile field service solution for K-Electric, enabling 2,000&#43; meter readers to manage daily assignments with AI-powered meter reading, maps, and offline sync.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:tag" content="Kotlin">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Jetpack Compose">
+    <meta property="article:tag" content="Field Service">
+    <meta property="article:tag" content="OCR">
+    <meta property="article:tag" content="Computer Vision">
+    <meta property="og:image" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/K-Electric-FSM.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/K-Electric-FSM.png">
+<meta name="twitter:title" content="K-Electric Field Service Management">
+<meta name="twitter:description" content="A web &amp; mobile field service solution for K-Electric, enabling 2,000&#43; meter readers to manage daily assignments with AI-powered meter reading, maps, and offline sync.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://rayan-mansoor.github.io/rayan-mansoor/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "K-Electric Field Service Management",
+      "item": "https://rayan-mansoor.github.io/rayan-mansoor/projects/k-electric-fsm/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "K-Electric Field Service Management",
+  "name": "K-Electric Field Service Management",
+  "description": "A web \u0026amp; mobile field service solution for K-Electric, enabling 2,000+ meter readers to manage daily assignments with AI-powered meter reading, maps, and offline sync.",
+  "keywords": [
+    "Kotlin", "Android", "Jetpack Compose", "Field Service", "OCR", "Computer Vision", "Maps", "Offline First", "REST APIs"
+  ],
+  "articleBody": "Description This project was delivered to K-Electric, the largest electric utility company in Pakistan, as a field service management solution consisting of:\nA web application for admins and supervisors to manage assignments, users, and reporting A mobile app for meter readers in the field to execute and record their daily tasks I worked on the Android mobile app used by 2,000+ meter readers to efficiently complete their assigned orders. The app focuses on:\nClear progress visibility Location-aware task execution Fast and accurate meter reading with AI/OCR Reliable operation in low-connectivity environments My Role Developed core features of the meter reader Android app using Kotlin and Jetpack Compose Integrated AI-powered meter reading using OCR from captured images Helped design offline-first flows with background synchronization to the central backend and web portal Collaborated with backend and web teams to align APIs, data models, and status flows between field and admin sides Key Features (Mobile App – Meter Readers) Home Dashboard for Daily Progress\nAt-a-glance stats for assigned, completed, and remaining meters Visual indicators to help meter readers track productivity throughout the day Map-Based Meter Tracking\nView assigned meters directly on a map Support for heatmaps and counts to highlight dense areas and remaining workload Location-aware navigation to each meter’s coordinates Guided Meter Reading Workflow\nFor each meter, the app shows an easy-to-fill form with dropdowns and constrained inputs Capture meter images using the device camera Integrated OCR/computer vision to automatically extract meter readings Achieved around 93% accuracy, significantly reducing manual entry errors Issue Reporting \u0026 Copoints\nMeter readers can submit “copoints” directly from the app Report broken/missing meters, tampering, access issues, and other meter-related problems Attach notes and photos for better follow-up by supervisors Offline-First with Seamless Sync\nFull workflow support in low or no connectivity areas Orders, readings, images, and issues are stored locally on the device Automatic synchronization to the central server and admin web portal once connectivity is restored Tech Stack (Mobile) Language: Kotlin UI: Android Jetpack Compose Architecture: ViewModel, repository pattern, dependency injection Data \u0026 Sync: Local caching with background sync to REST APIs Maps \u0026 Location: Android location services, map-based visualization of assigned meters AI \u0026 OCR: Computer vision/OCR pipeline to read meter dials from captured images ",
+  "wordCount" : "370",
+  "inLanguage": "en",
+  "image":"https://rayan-mansoor.github.io/rayan-mansoor/projects/K-Electric-FSM.png","datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rayan-mansoor.github.io/rayan-mansoor/projects/k-electric-fsm/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rayan Mansoor",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rayan-mansoor.github.io/rayan-mansoor/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rayan-mansoor.github.io/rayan-mansoor/" accesskey="h" title="Rayan Mansoor (Alt + H)">Rayan Mansoor</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/projects" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://rayan-mansoor.github.io/rayan-mansoor/">Home</a>&nbsp;»&nbsp;<a href="https://rayan-mansoor.github.io/rayan-mansoor/projects/">Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      K-Electric Field Service Management
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://rayan-mansoor.github.io/rayan-mansoor/projects/K-Electric-FSM.png" alt="">
+        
+</figure>
+  <div class="post-content"><h2 id="description">Description<a hidden class="anchor" aria-hidden="true" href="#description">#</a></h2>
+<p>This project was delivered to <strong>K-Electric</strong>, the largest electric utility company in Pakistan, as a <strong>field service management solution</strong> consisting of:</p>
+<ul>
+<li>A <strong>web application</strong> for admins and supervisors to manage assignments, users, and reporting</li>
+<li>A <strong>mobile app</strong> for meter readers in the field to execute and record their daily tasks</li>
+</ul>
+<p>I worked on the <strong>Android mobile app</strong> used by <strong>2,000+ meter readers</strong> to efficiently complete their assigned orders. The app focuses on:</p>
+<ul>
+<li>Clear progress visibility</li>
+<li>Location-aware task execution</li>
+<li>Fast and accurate meter reading with AI/OCR</li>
+<li>Reliable operation in low-connectivity environments</li>
+</ul>
+<hr>
+<h2 id="my-role">My Role<a hidden class="anchor" aria-hidden="true" href="#my-role">#</a></h2>
+<ul>
+<li>Developed core features of the <strong>meter reader Android app</strong> using <strong>Kotlin</strong> and <strong>Jetpack Compose</strong></li>
+<li>Integrated <strong>AI-powered meter reading</strong> using OCR from captured images</li>
+<li>Helped design <strong>offline-first flows</strong> with background synchronization to the central backend and web portal</li>
+<li>Collaborated with backend and web teams to align APIs, data models, and status flows between field and admin sides</li>
+</ul>
+<hr>
+<h2 id="key-features-mobile-app--meter-readers">Key Features (Mobile App – Meter Readers)<a hidden class="anchor" aria-hidden="true" href="#key-features-mobile-app--meter-readers">#</a></h2>
+<ol>
+<li>
+<p><strong>Home Dashboard for Daily Progress</strong></p>
+<ul>
+<li>At-a-glance stats for assigned, completed, and remaining meters</li>
+<li>Visual indicators to help meter readers track productivity throughout the day</li>
+</ul>
+</li>
+<li>
+<p><strong>Map-Based Meter Tracking</strong></p>
+<ul>
+<li>View assigned meters directly on a <strong>map</strong></li>
+<li>Support for <strong>heatmaps</strong> and counts to highlight dense areas and remaining workload</li>
+<li>Location-aware navigation to each meter’s coordinates</li>
+</ul>
+</li>
+<li>
+<p><strong>Guided Meter Reading Workflow</strong></p>
+<ul>
+<li>For each meter, the app shows an <strong>easy-to-fill form</strong> with dropdowns and constrained inputs</li>
+<li>Capture <strong>meter images</strong> using the device camera</li>
+<li>Integrated <strong>OCR/computer vision</strong> to automatically extract meter readings</li>
+<li>Achieved around <strong>93% accuracy</strong>, significantly reducing manual entry errors</li>
+</ul>
+</li>
+<li>
+<p><strong>Issue Reporting &amp; Copoints</strong></p>
+<ul>
+<li>Meter readers can submit “copoints” directly from the app</li>
+<li>Report broken/missing meters, tampering, access issues, and other meter-related problems</li>
+<li>Attach notes and photos for better follow-up by supervisors</li>
+</ul>
+</li>
+<li>
+<p><strong>Offline-First with Seamless Sync</strong></p>
+<ul>
+<li>Full workflow support in <strong>low or no connectivity</strong> areas</li>
+<li>Orders, readings, images, and issues are stored locally on the device</li>
+<li>Automatic synchronization to the central server and <strong>admin web portal</strong> once connectivity is restored</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="tech-stack-mobile">Tech Stack (Mobile)<a hidden class="anchor" aria-hidden="true" href="#tech-stack-mobile">#</a></h2>
+<ul>
+<li><strong>Language:</strong> Kotlin</li>
+<li><strong>UI:</strong> Android Jetpack Compose</li>
+<li><strong>Architecture:</strong> ViewModel, repository pattern, dependency injection</li>
+<li><strong>Data &amp; Sync:</strong> Local caching with background sync to REST APIs</li>
+<li><strong>Maps &amp; Location:</strong> Android location services, map-based visualization of assigned meters</li>
+<li><strong>AI &amp; OCR:</strong> Computer vision/OCR pipeline to read meter dials from captured images</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/kotlin/">Kotlin</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/android/">Android</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/jetpack-compose/">Jetpack Compose</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/field-service/">Field Service</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/ocr/">OCR</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/computer-vision/">Computer Vision</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/maps/">Maps</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/offline-first/">Offline First</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/rest-apis/">REST APIs</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://rayan-mansoor.github.io/rayan-mansoor/">Rayan Mansoor</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

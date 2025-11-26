@@ -1,0 +1,117 @@
+baseURL = "https://rayan-mansoor.github.io/rayan-mansoor/"
+languageCode = "en-us"
+title = "Rayan Mansoor"
+publishDir = "docs"
+
+# Use Hugo Modules to import PaperMod (no themes/ folder needed)
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+
+# Menus
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "experience"
+    name = "Experience"
+    url = "/experience"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search"
+    weight = 40
+
+  # [[menu.main]]
+  #   identifier = "tags"
+  #   name = "Tags"
+  #   url = "/tags"
+  #   weight = 60
+
+  # [[menu.main]]
+  #   identifier = "notes"
+  #   name = "Notes"
+  #   url = "https://notes.arkalim.org"
+  #   weight = 70
+
+# PaperMod params
+[params]
+  # theme
+  showToc = true
+  TocOpen = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  hideMeta = false
+
+  # enhanced SEO
+  env = "production"
+
+  # Home Page (Profile Mode)
+  [params.profileMode]
+    enabled = true
+    title = "Rayan Mansoor"
+    subtitle = """
+I’m a mobile developer skilled in Android (Kotlin), React Native (TypeScript), and Flutter (Dart). I focus on building fast, intuitive, and user-centered apps with clean architecture and modern design.
+
+With a strong software engineering background from NUST, I enjoy turning ideas into smooth, scalable, and reliable mobile experiences.
+"""
+    imageUrl = "home/portfolio-dp.jpg"
+    imageWidth = 220
+    imageHeight = 220
+
+    [[params.profileMode.buttons]]
+      name = "Resume"
+      url  = "https://drive.google.com/file/d/1FRhcVShjMzr2zfjNAXDuVeMqJ37wafc7/view?usp=sharing"
+
+  # List View
+  hideDescriptionInList = false
+
+  # Cover defaults
+  [params.cover]
+    hiddenInList = false
+    hiddenInSingle = false
+
+  # Socials
+  [[params.socialIcons]]
+    name = "email"
+    url  = "mailto:rayanmansoor45@gmail.com"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/rayanmansoor"
+
+  [[params.socialIcons]]
+    name = "github"
+    url  = "https://github.com/rayan-mansoor"
+
+  # Fuse.js search options
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+# Enable JSON on homepage for search index
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Allow HTML in Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

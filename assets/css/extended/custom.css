@@ -1,0 +1,32 @@
+/* Style cover images as small company logos for experience posts ONLY */
+.experience-list .post-entry .entry-cover {
+    max-width: 80px;
+    max-height: 80px;
+    margin-right: 1rem;
+    float: left;
+}
+
+.experience-list .post-entry .entry-cover img {
+    object-fit: contain;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+/* Experience metadata styling */
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.experience-company {
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.experience-date {
+    font-size: 0.9em;
+    color: var(--secondary);
+}

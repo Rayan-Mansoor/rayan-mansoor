@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Intenly – Voice Dataset Builder | Rayan Mansoor</title>
+<meta name="keywords" content="Kotlin, Android, Jetpack Compose, Hilt, Room, WorkManager, OpenAI, STT, ASR, NLU, ML Tools">
+<meta name="description" content="Intenly helps ML teams quickly collect multilingual speech with transcripts and intent labels, then export training-ready datasets.">
+<meta name="author" content="">
+<link rel="canonical" href="https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/">
+<link crossorigin="anonymous" href="/rayan-mansoor/assets/css/stylesheet.357b406731b533353f939725533aeb60de936989a4798292ba747eb941f9e081.css" integrity="sha256-NXtAZzG1MzU/k5clUzrrYN6TaYmkeYKSunR&#43;uUH54IE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rayan-mansoor.github.io/rayan-mansoor/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rayan-mansoor.github.io/rayan-mansoor/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rayan-mansoor.github.io/rayan-mansoor/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/">
+  <meta property="og:site_name" content="Rayan Mansoor">
+  <meta property="og:title" content="Intenly – Voice Dataset Builder">
+  <meta property="og:description" content="Intenly helps ML teams quickly collect multilingual speech with transcripts and intent labels, then export training-ready datasets.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:tag" content="Kotlin">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Jetpack Compose">
+    <meta property="article:tag" content="Hilt">
+    <meta property="article:tag" content="Room">
+    <meta property="article:tag" content="WorkManager">
+    <meta property="og:image" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/Intenly-Voice-Dataset-Builder.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rayan-mansoor.github.io/rayan-mansoor/projects/Intenly-Voice-Dataset-Builder.png">
+<meta name="twitter:title" content="Intenly – Voice Dataset Builder">
+<meta name="twitter:description" content="Intenly helps ML teams quickly collect multilingual speech with transcripts and intent labels, then export training-ready datasets.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://rayan-mansoor.github.io/rayan-mansoor/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Intenly – Voice Dataset Builder",
+      "item": "https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Intenly – Voice Dataset Builder",
+  "name": "Intenly – Voice Dataset Builder",
+  "description": "Intenly helps ML teams quickly collect multilingual speech with transcripts and intent labels, then export training-ready datasets.",
+  "keywords": [
+    "Kotlin", "Android", "Jetpack Compose", "Hilt", "Room", "WorkManager", "OpenAI", "STT", "ASR", "NLU", "ML Tools"
+  ],
+  "articleBody": "Description Intenly is a voice dataset builder designed for ML and NLU teams who need to collect speech + transcript + intent label quickly — especially for languages where typing is slow or painful (like Urdu).\nThe app streamlines the full loop:\nRecord speech on-device Auto-transcribe via OpenAI STT Assign an intent label to each utterance Export a ZIP that plugs into common ASR/NLU training scripts The goal is to remove the friction of custom “data collection tools” and provide a clean, opinionated workflow from spoken utterance → training data.\nKey Features Multilingual Recording \u0026 Transcription\nRecord 16 kHz mono WAV audio and auto-transcribe with OpenAI (e.g. gpt-4o-mini-transcribe or whisper-1), using Auto Detect or fixed language tags like ur-PK / en-US.\nIntent-Centric Data Collection\nCreate per-project intents (e.g. check_balance, greet) and attach each utterance so you always capture the full tuple: (audio, text, intent).\nProject-Based Workspaces\nWork inside clean, auto-named projects (project-001, project-002, …), rename them as needed, and let each project remember its last-used language.\nSamples Browser with Playback\nReview saved samples per project — see transcript, intent, duration, date — and play back audio or delete items directly from the list.\nOne-Tap Dataset Export\nExport a single ZIP that contains:\naudio/ WAV files ASR manifests (*.jsonl) Intent manifests (*.csv) Split info (train/valid) and a small dataset card/schema Training-Ready Format\nThe exported manifests are structured so you can wire them into ASR or intent-classification pipelines with minimal glue code.\nTech Stack Platform: Android (Kotlin) UI: Jetpack Compose (Material 3) Architecture: Hilt for DI, Room for local storage, repository-based data layer Background Work: WorkManager for dataset export Audio: Custom WAV recorder (16 kHz mono) STT Integration: OpenAI /v1/audio/transcriptions (configurable model, auto or fixed language) Intenly sits at the intersection of mobile UX and ML tooling — giving teams a practical way to collect high-quality, multilingual speech datasets directly from real devices.\n",
+  "wordCount" : "311",
+  "inLanguage": "en",
+  "image":"https://rayan-mansoor.github.io/rayan-mansoor/projects/Intenly-Voice-Dataset-Builder.png","datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rayan-mansoor.github.io/rayan-mansoor/projects/voice-dataset_builder/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rayan Mansoor",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rayan-mansoor.github.io/rayan-mansoor/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rayan-mansoor.github.io/rayan-mansoor/" accesskey="h" title="Rayan Mansoor (Alt + H)">Rayan Mansoor</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/projects" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rayan-mansoor.github.io/rayan-mansoor/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://rayan-mansoor.github.io/rayan-mansoor/">Home</a>&nbsp;»&nbsp;<a href="https://rayan-mansoor.github.io/rayan-mansoor/projects/">Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Intenly – Voice Dataset Builder
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://rayan-mansoor.github.io/rayan-mansoor/projects/Intenly-Voice-Dataset-Builder.png" alt="">
+        
+</figure>
+  <div class="post-content"><h2 id="description">Description<a hidden class="anchor" aria-hidden="true" href="#description">#</a></h2>
+<p><strong>Intenly</strong> is a voice dataset builder designed for <strong>ML and NLU teams</strong> who need to collect <strong>speech + transcript + intent label</strong> quickly — especially for languages where typing is slow or painful (like Urdu).</p>
+<p>The app streamlines the full loop:</p>
+<ol>
+<li><strong>Record speech</strong> on-device</li>
+<li><strong>Auto-transcribe</strong> via OpenAI STT</li>
+<li><strong>Assign an intent label</strong> to each utterance</li>
+<li><strong>Export a ZIP</strong> that plugs into common ASR/NLU training scripts</li>
+</ol>
+<p>The goal is to remove the friction of custom “data collection tools” and provide a clean, opinionated workflow from <strong>spoken utterance → training data</strong>.</p>
+<hr>
+<h2 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h2>
+<ul>
+<li>
+<p><strong>Multilingual Recording &amp; Transcription</strong><br>
+Record <strong>16 kHz mono WAV</strong> audio and auto-transcribe with OpenAI (e.g. <code>gpt-4o-mini-transcribe</code> or <code>whisper-1</code>), using <strong>Auto Detect</strong> or fixed language tags like <code>ur-PK</code> / <code>en-US</code>.</p>
+</li>
+<li>
+<p><strong>Intent-Centric Data Collection</strong><br>
+Create per-project intents (e.g. <code>check_balance</code>, <code>greet</code>) and attach each utterance so you always capture the full tuple: <strong>(audio, text, intent)</strong>.</p>
+</li>
+<li>
+<p><strong>Project-Based Workspaces</strong><br>
+Work inside clean, auto-named projects (<code>project-001</code>, <code>project-002</code>, …), rename them as needed, and let each project remember its last-used language.</p>
+</li>
+<li>
+<p><strong>Samples Browser with Playback</strong><br>
+Review saved samples per project — see transcript, intent, duration, date — and <strong>play back audio</strong> or delete items directly from the list.</p>
+</li>
+<li>
+<p><strong>One-Tap Dataset Export</strong><br>
+Export a <strong>single ZIP</strong> that contains:</p>
+<ul>
+<li><code>audio/</code> WAV files</li>
+<li>ASR manifests (<code>*.jsonl</code>)</li>
+<li>Intent manifests (<code>*.csv</code>)</li>
+<li>Split info (train/valid) and a small dataset card/schema</li>
+</ul>
+</li>
+<li>
+<p><strong>Training-Ready Format</strong><br>
+The exported manifests are structured so you can wire them into ASR or intent-classification pipelines with minimal glue code.</p>
+</li>
+</ul>
+<hr>
+<h2 id="tech-stack">Tech Stack<a hidden class="anchor" aria-hidden="true" href="#tech-stack">#</a></h2>
+<ul>
+<li><strong>Platform:</strong> Android (Kotlin)</li>
+<li><strong>UI:</strong> Jetpack Compose (Material 3)</li>
+<li><strong>Architecture:</strong> Hilt for DI, Room for local storage, repository-based data layer</li>
+<li><strong>Background Work:</strong> WorkManager for dataset export</li>
+<li><strong>Audio:</strong> Custom WAV recorder (16 kHz mono)</li>
+<li><strong>STT Integration:</strong> OpenAI <code>/v1/audio/transcriptions</code> (configurable model, auto or fixed language)</li>
+</ul>
+<hr>
+<p>Intenly sits at the intersection of <strong>mobile UX</strong> and <strong>ML tooling</strong> — giving teams a practical way to collect high-quality, multilingual speech datasets directly from real devices.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/kotlin/">Kotlin</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/android/">Android</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/jetpack-compose/">Jetpack Compose</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/hilt/">Hilt</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/room/">Room</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/workmanager/">WorkManager</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/openai/">OpenAI</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/stt/">STT</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/asr/">ASR</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/nlu/">NLU</a></li>
+      <li><a href="https://rayan-mansoor.github.io/rayan-mansoor/tags/ml-tools/">ML Tools</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://rayan-mansoor.github.io/rayan-mansoor/">Rayan Mansoor</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
