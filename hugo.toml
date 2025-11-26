@@ -106,6 +106,9 @@ With a strong software engineering background from NUST, I enjoy turning ideas i
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
 
+  [params.assets]
+    disableFingerprinting = true
+
 # Enable JSON on homepage for search index
 [outputs]
   home = ["HTML", "RSS", "JSON"]
