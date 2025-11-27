@@ -5,9 +5,9 @@ dateString: 2024
 draft: false
 tags: ["Typescript", "Javascript", "CSS", "React Native", "Expo", "Firebase", "RestAPI", "Voice Control", "Text To Seech", "Tensorflow", "Lottie", "Localization", "Redux", "MMKV", "Colorblind Modes"]
 showToc: false
-weight: 201
+weight: 202
 cover:
-    image: "projects/React-Native-Doctor-Appointment.jpg"
+    image: "projects/React-Native-Doctor-Appointment.png"
 --- 
 ### 🔗 [GitHub Repo - React Native Doctor Appointment App](https://github.com/Rayan-Mansoor/React-Native-Doctor-Appointment-App)
 

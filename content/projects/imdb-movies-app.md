@@ -5,7 +5,7 @@ dateString: 2022
 draft: false
 tags: ["Kotlin", "Java", "Groovy", "XML", "Jetpack Compose", "Android", "Room", "SQLite", "REST API"]
 showToc: false
-weight: 204
+weight: 206
 cover:
     image: "projects/IMDB-Movies-List.jpg"
 --- 

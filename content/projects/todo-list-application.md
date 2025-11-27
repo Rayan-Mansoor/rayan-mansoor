@@ -5,7 +5,7 @@ dateString: 2022
 draft: false
 tags: ["Java", "JavaFX", "FXML", "Maven", "JavaMail", "Desktop App", "Todo", "Productivity", "CRUD"]
 showToc: false
-weight: 206
+weight: 209
 cover:
     image: "projects/TODO-List.jpg"
 --- 

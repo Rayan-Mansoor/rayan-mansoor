@@ -5,7 +5,7 @@ dateString: 2022
 draft: false
 tags: ["Java", "JavaFX", "FXML", "Maven", "Media Player", "Desktop App", "Windows", "macOS", "Linux"]
 showToc: false
-weight: 205
+weight: 207
 cover:
     image: "projects/Media-Player.jpg"
 --- 

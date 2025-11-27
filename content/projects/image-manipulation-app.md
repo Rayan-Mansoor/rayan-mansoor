@@ -5,7 +5,7 @@ dateString: 2023
 draft: false
 tags: ["Kotlin", "Android", "ViewBinding", "XML", "Image Processing", "Glide", "MediaStore"]
 showToc: false
-weight: 203
+weight: 205
 cover:
     image: "projects/Image-Manipulation.jpg"
 --- 

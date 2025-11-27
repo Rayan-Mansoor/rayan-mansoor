@@ -5,7 +5,7 @@ dateString: 2025
 draft: false
 tags: ["Kotlin", "Android", "Jetpack Compose", "Hilt", "Room", "WorkManager", "OpenAI", "STT", "ASR", "NLU", "ML Tools"]
 showToc: false
-weight: 202
+weight: 203
 cover:
     image: "projects/Intenly-Voice-Dataset-Builder.png"
 ---

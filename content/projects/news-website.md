@@ -5,7 +5,7 @@ dateString: 2021
 draft: false
 tags: ["Typescript", "Javascript", "CSS", "React", "RestAPI", "React Router", "SPA", "Responsive"]
 showToc: false
-weight: 207
+weight: 208
 cover:
     image: "projects/News.jpg"
 --- 
