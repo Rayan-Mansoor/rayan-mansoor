@@ -11,6 +11,7 @@ cover:
 ---
 
 ### 🔗 [Available on Google Play Store](https://play.google.com/store/apps/details?id=com.alce.studyitalian)
+### 🔗 [Available on Apple App Store](https://apps.apple.com/us/app/alce/id6755894439)
 
 ## Description
 
